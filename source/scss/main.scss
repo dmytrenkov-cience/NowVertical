@@ -3,34 +3,497 @@
 
 /* Start your scss code below: */
 
-$button-bg: #1B89CA;
-$button-color: #fff;
+$blue: #5672ff;
+$white: #fff;
 
 .cta {
   display: inline-flex;
-  min-width: 200px;
-  min-height: 50px;
-  justify-content:center;
+  min-width: 166px;
+  min-height: 44px;
+  justify-content: center;
   align-items: center;
-  line-height: 1;
-  font-size: 14px;
-  letter-spacing: 0.1em;
-  font-weight: 700;
-  background: $button-bg;
-  color: $button-color !important;
+  line-height: 1.33;
+  font-size: 15px;
+  font-weight: 500;
+  background: $blue;
+  color: $white !important;
   text-decoration: none !important;
-  text-transform: uppercase;
-  transition: all .3s ease;
-  border-radius: 5px;
-  &:hover{
-    background: darken($button-bg, 7);
+  transition: all 0.3s ease;
+  border-radius: 100px;
+  &:hover {
+    background: darken($blue, 7);
   }
 }
 
-@media (min-width: 1200px){
-  .cta {
-    min-width: 230px;
-    min-height: 55px;
-    font-size: 16px;
+.intro {
+  padding: 30px 0px 15px;
+  background: url("https://app.unbouncepreview.com/publish/assets/18eba90b-33f7-489c-9394-4def7697241e/a1b36c1c-intro-bg.jpg")
+    no-repeat -746px -590px;
+  background-size: 1578px 1578px;
+  &-logo {
+    height: 59px;
+    margin-bottom: 20px;
+    img {
+      width: auto;
+      height: 100%;
+    }
   }
+  &-header {
+    font-size: 30px;
+    line-height: 39px;
+    letter-spacing: -0.03em;
+    font-weight: 600;
+    color: $white;
+    margin-bottom: 10px;
+  }
+  &-text {
+    font-size: 24px;
+    line-height: 34px;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    color: $white;
+    margin-bottom: 31px;
+  }
+  .cta {
+    margin-bottom: 30px;
+  }
+  &-video {
+    height: 180px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 78px;
+      height: 78px;
+      background: url("https://app.unbouncepreview.com/publish/assets/4093156e-ab17-4333-b272-fd0de55573c0/ffbca0e6-play-btn.svg")
+        no-repeat center;
+      background-size: cover;
+      pointer-events: none;
+    }
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .intro {
+    padding: 60px 0;
+    background: url("https://app.unbouncepreview.com/publish/assets/18eba90b-33f7-489c-9394-4def7697241e/a1b36c1c-intro-bg.jpg")
+      no-repeat -211px -590px;
+    background-size: 1578px 1578px;
+    &-logo {
+      height: 73px;
+      margin-bottom: 60px;
+    }
+    &-header {
+      font-size: 48px;
+      line-height: 53px;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+    &-text {
+      font-size: 30px;
+      line-height: 39px;
+      letter-spacing: -0.03em;
+    }
+    .cta {
+      margin-bottom: 0;
+    }
+    &-video {
+      height: 350px;
+      margin: 38px auto 0;
+    }
+  }
+}
+
+@media (min-width: 1578px) {
+  .intro {
+    background-size: 1920px 1920px;
+    background-position: center -761px;
+  }
+}
+.agency {
+  padding: 70px 0;
+  &-header {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: $blue;
+    margin-bottom: 20px;
+  }
+  &-logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 290px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  &-logo:last-child {
+    width: 100%;
+    text-align: center;
+  }
+  &-logo {
+    margin-top: 21px;
+  }
+  &-logo:nth-child(1),
+  &-logo:nth-child(2) {
+    margin-top: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .agency {
+    padding: 100px 0;
+    &-header {
+      margin-bottom: 36px;
+    }
+    &-logos {
+      max-width: 920px;
+    }
+    &-logo:last-child {
+      width: auto;
+      text-align: initial;
+    }
+    &-logo {
+      margin-top: 0;
+    }
+  }
+}
+
+.start {
+  &-header {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: $blue;
+    margin-bottom: 5px;
+  }
+  &-wrapper {
+    border-bottom: 1px solid rgba(43, 43, 43, 0.3);
+    padding-bottom: 50px;
+  }
+  &-subtitle {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  &-item {
+    margin-bottom: 17px;
+  }
+  &-item__text {
+    font-size: 12px;
+    line-height: 17px;
+    letter-spacing: -0.005em;
+    font-weight: 500;
+  }
+  &-item__btn {
+    min-width: 178px;
+    min-height: 45px;
+    background-color: $white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    a {
+      color: #141414;
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: -0.02em;
+      font-weight: 500;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .start {
+    padding-bottom: 0;
+    border-bottom: none;
+    &-wrapper {
+      padding-bottom: 59px;
+      border-bottom: 1px solid rgba(43, 43, 43, 0.3);
+    }
+    &-item {
+      margin-bottom: 0;
+    }
+    &-item__text {
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: -0.02em;
+    }
+    &-item__btn {
+      margin-top: 39px;
+    }
+  }
+}
+.review {
+  padding: 50px 0px 70px;
+  &-wrapper {
+    background: #f7f7f7;
+    border-radius: 20px;
+    padding: 20px;
+  }
+  &-item__icon {
+    margin-bottom: 20px;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(38, 145, 198, 0.1);
+    border-radius: 10px;
+  }
+  &-header {
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    color: $blue;
+    margin-bottom: 5px;
+  }
+  &-item__text {
+    font-size: 12px;
+    line-height: 17px;
+    letter-spacing: -0.005em;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  &-item__btn {
+    min-width: 193px;
+    min-height: 45px;
+    background-color: $white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    a {
+      color: #141414;
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: -0.02em;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .review {
+    padding: 60px 0px 100px;
+    &-wrapper {
+      padding: 50px 95px;
+      width: 730px;
+      margin: 0 auto;
+    }
+    &-item {
+      display: flex;
+      align-items: flex-start;
+    }
+    &-item__icon {
+      margin-bottom: 0;
+      margin-top: 40px;
+      width: 65px;
+      height: 79px;
+    }
+    &-item__inner {
+      margin-left: 30px;
+      width: 445px;
+    }
+    &-header {
+      margin-bottom: 10px;
+    }
+    &-item__text {
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: -0.02em;
+    }
+    &-item__btn {
+      min-width: 193px;
+    }
+  }
+}
+.works {
+  padding-bottom: 70px;
+  &-header {
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    color: $blue;
+  }
+  &-item {
+    margin-top: 30px;
+    text-align: center;
+  }
+  &-item__logo {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: #f7f7f7;
+    border-radius: 25px;
+    margin: 0 auto 30px;
+  }
+  &-item__logo-step {
+    position: absolute;
+    right: -2px;
+    top: -2px;
+    z-index: 2;
+    width: 20px;
+    height: 20px;
+    background-color: #31afc3;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    line-height: 17px;
+    letter-spacing: -0.005em;
+    font-weight: 600;
+    border-radius: 100%;
+  }
+  &-item__title {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    color: #2b2b2b;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  &-item__text {
+    font-size: 12px;
+    line-height: 17px;
+    letter-spacing: -0.005em;
+    font-weight: 600;
+    color: #141414;
+  }
+}
+@media (min-width: 1200px) {
+  .works {
+    padding-bottom: 100px;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      left: calc(50% - 250px);
+      top: 77px;
+      background: url("https://app.unbouncepreview.com/publish/assets/528fa70b-d161-4ed9-b326-447684dac75f/8e8b72ef-works-arrow-1.svg")
+        no-repeat center;
+      background-size: cover;
+      width: 113px;
+      height: 55px;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      right: calc(50% - 250px);
+      top: 77px;
+      background: url("https://app.unbouncepreview.com/publish/assets/245f9b38-bfe7-4ac8-890b-4ba4c74ce2dd/a0220128-works-arrow-2.svg")
+        no-repeat center;
+      background-size: cover;
+      width: 113px;
+      height: 55px;
+    }
+    &-item {
+      margin-top: 35px;
+    }
+    &-item__logo {
+      margin: 0 auto 25px;
+    }
+  }
+}
+.footer {
+  padding: 70px 0px 170px;
+  background-color: $blue;
+  &-header {
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    text-align: center;
+    color: $white;
+    margin-bottom: 10px;
+  }
+  &-subtitle {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    text-align: center;
+    color: $white;
+    margin-bottom: 50px;
+  }
+  &-wrapper {
+    margin: 50px auto 0;
+    text-align: center;
+  }
+  &-copyright {
+    font-weight: 500;
+    text-align: center;
+    color: $white;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(251, 247, 244, 0.2);
+  }
+  &-link {
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    display: inline-flex;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &-link a {
+    text-decoration: underline;
+    font-size: 14px;
+    line-height: 21px;
+    color: #fbf7f4;
+    font-weight: 500;
+  }
+}
+@media (min-width: 1200px) {
+  .footer {
+    padding: 70px 0px;
+    .calendar-wrap {
+      margin-top: -69px;
+      margin-bottom: -40px;
+    }
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 730px;
+      margin: 50px auto 0;
+    }
+    &-copyright {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    &-link {
+      margin-top: 0;
+    }
+  }
+}
+
+.scrollBtnToTop {
+  background: #000;
 }
